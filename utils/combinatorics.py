@@ -28,7 +28,7 @@ def getCombinations(collection,m,repetition):
             for element in collection:
                 new_perm = curr_perm[:]
                 new_perm.append(element)
-                key = ''.join(sorted(new_perm))
+                key = ''.join(sorted([str(elem) for elem in new_perm]))
                 if key not in combinations:
                     combinations[key] = new_perm
         else:
